@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Studio - Creative Design & Development",
-  description: "We create exceptional digital experiences through innovative design and development. Specializing in web development, UI/UX design, and digital strategy.",
+  title: "Start Online - Building Software that Scales With You",
+  description: "We build software that transforms ideas into powerful, scalable products fast and simple.",
 };
 
 export default function RootLayout({
