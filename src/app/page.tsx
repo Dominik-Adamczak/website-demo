@@ -146,7 +146,7 @@ export default function Home() {
                 Who we are
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                We're more than just a development agency. We're builders,
+                We&apos;re more than just a development agency. We&apos;re builders,
                 innovators, dreamers.
               </p>
               <p className="text-lg text-gray-600 mb-6">
@@ -156,7 +156,7 @@ export default function Home() {
               </p>
               <p className="text-lg text-gray-600 mb-8">
                 Today, we help startups and enterprises bring their ideas to
-                life whether it's launching an MVP or optimizing existing
+                life whether it&apos;s launching an MVP or optimizing existing
                 software. Our focus is always on quality, performance, and user
                 experience.
               </p>
@@ -370,11 +370,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
           <div className="relative z-10 py-16 px-8 text-center text-white">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Let's Create Something Extraordinary Together
+              Let&apos;s Create Something Extraordinary Together
             </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-              For us, it's about understanding your vision, ensuring your
-              problems and creating amazing solutions that grow with you. Let's
+              For us, it&apos;s about understanding your vision, ensuring your
+              problems and creating amazing solutions that grow with you. Let&apos;s
               build something meaningful together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -418,7 +418,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-gray-600 mb-8">
                 Ready to transform your business with innovative technology solutions?
-                We'd love to hear about your project and discuss how we can help you
+                We&apos;d love to hear about your project and discuss how we can help you
                 achieve your goals. Get in touch with us today.
               </p>
 
@@ -567,7 +567,7 @@ export default function Home() {
                   <textarea
                     rows={5}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                    placeholder="Please describe your project requirements, business objectives, technical challenges, and any specific goals you'd like to achieve. Include any relevant technical specifications or constraints."
+                    placeholder="Please describe your project requirements, business objectives, technical challenges, and any specific goals you&apos;d like to achieve. Include any relevant technical specifications or constraints."
                   ></textarea>
                 </div>
                 <div className="flex items-start space-x-3">
