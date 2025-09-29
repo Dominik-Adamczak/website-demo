@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Start Online - Building Software that Scales With You",
+  title: "Start On Idea - Building Software that Scales With You",
   description: "We build software that transforms ideas into powerful, scalable products fast and simple.",
 };
 
