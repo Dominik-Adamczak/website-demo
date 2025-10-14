@@ -5,12 +5,43 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showComingSoon, setShowComingSoon] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+
+  const handleGetQuoteClick = () => {
+    setShowComingSoon(true);
+    setTimeout(() => {
+      setShowComingSoon(false);
+    }, 3000);
+  };
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white relative">
+      {/* Coming Soon Modal */}
+      {showComingSoon && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-8 max-w-md mx-4 text-center shadow-2xl">
+            <div className="mb-4">
+              <svg className="w-16 h-16 mx-auto text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">Feature Coming Soon</h3>
+            <p className="text-gray-600 mb-6">
+              We&apos;re working hard to bring you an enhanced quote request experience.
+              In the meantime, please feel free to contact us directly for your project needs.
+            </p>
+            <button
+              onClick={() => setShowComingSoon(false)}
+              className="bg-black text-white px-6 py-2 rounded-full font-medium hover:bg-gray-800 transition-colors"
+            >
+              Got it
+            </button>
+          </div>
+        </div>
+      )}
       {/* Header/Navigation */}
       <header className="bg-white shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -52,7 +83,10 @@ export default function Home() {
               </div>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors">
+              <button
+                onClick={handleGetQuoteClick}
+                className="bg-black text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition-colors"
+              >
                 GET A FREE QUOTE
               </button>
               {/* Mobile menu button */}
@@ -455,7 +489,10 @@ export default function Home() {
               >
                 CONTACT US
               </a>
-              <button className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors flex items-center justify-center">
+              <button
+                onClick={handleGetQuoteClick}
+                className="border border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-black transition-colors flex items-center justify-center"
+              >
                 GET A FREE QUOTE
                 <svg
                   className="ml-2 w-4 h-4"
