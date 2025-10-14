@@ -1,6 +1,14 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
   return (
     <div className="min-h-screen bg-white">
       {/* Header/Navigation */}
@@ -49,7 +57,10 @@ export default function Home() {
               </button>
               {/* Mobile menu button */}
               <div className="lg:hidden">
-                <button className="text-gray-900 hover:text-gray-600">
+                <button
+                  onClick={toggleMobileMenu}
+                  className="text-gray-900 hover:text-gray-600"
+                >
                   <svg
                     className="h-6 w-6"
                     fill="none"
@@ -60,10 +71,70 @@ export default function Home() {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth={2}
-                      d="M4 6h16M4 12h16M4 18h16"
+                      d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
                     />
                   </svg>
                 </button>
+              </div>
+            </div>
+          </div>
+          
+          {/* Mobile menu dropdown */}
+          <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? 'max-h-96 opacity-100'
+              : 'max-h-0 opacity-0 overflow-hidden'
+          }`}>
+            <div className="px-4 pt-4 pb-6 space-y-2 bg-white border-t border-gray-100 shadow-lg">
+              <div className="space-y-1">
+                <a
+                  href="#"
+                  className="text-gray-900 hover:text-yellow-600 hover:bg-gray-50 block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-yellow-600"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    Home
+                  </div>
+                </a>
+                <a
+                  href="#about"
+                  className="text-gray-900 hover:text-yellow-600 hover:bg-gray-50 block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-yellow-600"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                    About Us
+                  </div>
+                </a>
+                <a
+                  href="#services"
+                  className="text-gray-900 hover:text-yellow-600 hover:bg-gray-50 block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-yellow-600"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                    Our Services
+                  </div>
+                </a>
+                <a
+                  href="#contact"
+                  className="text-gray-900 hover:text-yellow-600 hover:bg-gray-50 block px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 border-l-4 border-transparent hover:border-yellow-600"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 mr-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    Contact
+                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -526,7 +597,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://www.pinterest.com/startonidea/"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <svg
