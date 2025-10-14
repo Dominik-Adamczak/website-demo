@@ -15,7 +15,7 @@ export default function Home() {
                 src="/images/logo.png"
               />
             </div>
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
               <div className="ml-10 flex items-baseline space-x-8">
                 <a
                   href="#"
@@ -48,7 +48,7 @@ export default function Home() {
                 GET A FREE QUOTE
               </button>
               {/* Mobile menu button */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button className="text-gray-900 hover:text-gray-600">
                   <svg
                     className="h-6 w-6"
@@ -408,7 +408,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 gap-12">
             <div>
               <div className="text-sm font-semibold text-yellow-600 mb-2">
                 CONTACT
@@ -452,141 +452,6 @@ export default function Home() {
                   title="Office Location - 12709 Tanglewood Dr, Urbandale, IA 50323"
                 ></iframe>
               </div>
-            </div>
-
-            <div>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name*
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      placeholder="John Smith"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Business Phone*
-                    </label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      placeholder="+1 (555) 123-4567"
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Business Email*
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      placeholder="john.smith@company.com"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Company Name*
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                      placeholder="Your Company Inc."
-                    />
-                  </div>
-                </div>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Industry*
-                    </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900 bg-white">
-                      <option>Select your industry</option>
-                      <option>Technology & Software</option>
-                      <option>Healthcare & Life Sciences</option>
-                      <option>Financial Services</option>
-                      <option>Manufacturing</option>
-                      <option>Retail & E-commerce</option>
-                      <option>Education</option>
-                      <option>Government & Public Sector</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Project Budget Range
-                    </label>
-                    <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900 bg-white">
-                      <option>Select budget range</option>
-                      <option>$10K - $25K</option>
-                      <option>$25K - $50K</option>
-                      <option>$50K - $100K</option>
-                      <option>$100K - $250K</option>
-                      <option>$250K+</option>
-                      <option>Prefer to discuss</option>
-                    </select>
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest*
-                  </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900 bg-white">
-                    <option>Select primary service interest</option>
-                    <option>Custom Software Development</option>
-                    <option>System Integration & Optimization</option>
-                    <option>Strategic Technology Consulting</option>
-                    <option>Digital Transformation & Innovation</option>
-                    <option>Enterprise Application Development</option>
-                    <option>Cloud Migration & Architecture</option>
-                    <option>Multiple Services</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Timeline
-                  </label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent text-gray-900 bg-white">
-                    <option>Select preferred timeline</option>
-                    <option>Immediate (Within 1 month)</option>
-                    <option>Short-term (1-3 months)</option>
-                    <option>Medium-term (3-6 months)</option>
-                    <option>Long-term (6+ months)</option>
-                    <option>Flexible</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Details & Requirements*
-                  </label>
-                  <textarea
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
-                    placeholder="Please describe your project requirements, business objectives, technical challenges, and any specific goals you&apos;d like to achieve. Include any relevant technical specifications or constraints."
-                  ></textarea>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    id="privacy-consent"
-                    className="mt-1 h-4 w-4 text-yellow-600 focus:ring-yellow-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="privacy-consent" className="text-sm text-gray-600">
-                    I consent to the processing of my personal data for the purpose of business communication and project evaluation. I understand that my information will be handled in accordance with applicable privacy regulations.
-                  </label>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-black text-white px-8 py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors text-lg"
-                >
-                  REQUEST CONSULTATION
-                </button>
-              </form>
             </div>
           </div>
         </div>
